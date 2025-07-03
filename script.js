@@ -1,4 +1,3 @@
-
 function append(char) {
     document.getElementById('display').value += char;
 }
@@ -7,7 +6,8 @@ function clearDisplay() {
 }
 function calculate() {
     try {
-        document.getElementById('display').value = eval(document.getElementById('display').value);
+        // Use math.js for safe evaluation
+        document.getElementById('display').value = math.evaluate(document.getElementById('display').value);
     } catch {
         document.getElementById('display').value = 'Error';
     }
