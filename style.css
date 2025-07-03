@@ -8,6 +8,11 @@ body {
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 8px;
+  background: #000; /* Set calculator background to black */
+  color: #fff; /* Set text color to white */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
 }
 input[type="text"] {
   width: 100%;

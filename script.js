@@ -5,11 +5,21 @@ function append(char) {
 
     // Prevent multiple consecutive operators
     if (operators.includes(char) && operators.includes(lastChar)) {
-        // Replace the last operator with the new one
         display.value = display.value.slice(0, -1) + char;
-    } else {
-        display.value += char;
+        return;
     }
+
+    // Prevent multiple dots in a number
+    if (char === '.') {
+        // Split by operators to get the current number
+        const parts = display.value.split(/[\+\-\*\/]/);
+        const currentNumber = parts[parts.length - 1];
+        if (currentNumber.includes('.')) {
+            return; // Don't append another dot
+        }
+    }
+
+    display.value += char;
 }
 function clearDisplay() {
     document.getElementById('display').value = '';
