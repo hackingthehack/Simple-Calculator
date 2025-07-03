@@ -9,10 +9,7 @@ body {
   border: 1px solid #ccc;
   border-radius: 8px;
   background: #000; /* Set calculator background to black */
-  color: #fff; /* Set text color to white */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
+ 
 }
 input[type="text"] {
   width: 100%;
@@ -29,4 +26,15 @@ input[type="text"] {
 button {
   height: 40px;
   font-size: 1.1em;
+}
+.clearBtn {
+  grid-column: span 4;
+  background: #f44336;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  height: 40px;
+  border-radius: 4px;
+  cursor: pointer;
 }
